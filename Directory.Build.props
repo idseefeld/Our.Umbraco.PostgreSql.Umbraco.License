@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<PropertyGroup>
+		<VersionPrefix>19.0.0</VersionPrefix>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<Version>$(VersionPrefix)-rc2</Version>
+		<Authors>Dirk Seefeld</Authors>
+		<PackageIcon>postgresql.png</PackageIcon>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<Product>PostgreSQL Provider for Umbraco CMS</Product>
+		<Copyright>Copyright © Dirk Seefeld $([System.DateTime]::Today.ToString('yyyy'))</Copyright>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<TargetFramework>net11.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+	
+	<!-- SourceLink -->
+	<PropertyGroup>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageOutputPath>Z:\nuget.local\v19</PackageOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\postgresql.png" Pack="true" PackagePath=""/>
+		<None Include="..\LICENSE" Pack="true" PackagePath=""/>
+		<None Include="..\readme.md" Pack="true" PackagePath=""/>
+	</ItemGroup>
+</Project>

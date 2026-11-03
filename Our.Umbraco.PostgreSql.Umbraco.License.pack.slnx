@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="Our.Umbraco.PostgreSql.Umbraco.License/Our.Umbraco.PostgreSql.Umbraco.License.pack.csproj" />
+  <Project Path="Umbraco19.www/Umbraco19.www.csproj" />
+</Solution>
