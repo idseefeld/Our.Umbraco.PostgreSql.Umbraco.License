@@ -9,11 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Content Remove="Z:\source\.nuget\packages\our.umbraco.postgresql\19.0.0-rc2\contentFiles\any\net11.0\umbraco-marketplace.json" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="Our.Umbraco.PostgreSql" Version="19.0.0-rc2" />
+	  <PackageReference Include="Our.Umbraco.PostgreSql" Version="[19.0.0-rc2,20.0.0)" />
 	</ItemGroup>
 
 </Project>
