@@ -418,5 +418,5 @@ FodyWeavers.xsd
 *.msp
 
 # Package
-/Package/Umbraco17.www
-/Package/Umbraco19.www
+/Umbraco17.www
+/Umbraco19.www
