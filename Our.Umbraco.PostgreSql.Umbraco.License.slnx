@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/NPoco/">
+    <Project Path="NPoco/src/NPoco.Abstractions/NPoco.Abstractions.csproj" />
+    <Project Path="NPoco/src/NPoco.SqlServer/NPoco.SqlServer.csproj" />
+    <Project Path="NPoco/src/NPoco/NPoco.csproj" />
+  </Folder>
+  <Folder Name="/PostgtreSql/">
+    <Project Path="Package/Our.Umbraco.PostgreSql.Umbraco.License/Our.Umbraco.PostgreSql.Umbraco.License.pack.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Package/Directory.Build.props" />
+    <File Path="Package/Our.Umbraco.PostgreSql.Umbraco.License/wwwroot/App_Plugins/Our.Umbraco.PostgreSql.Umbraco.License/umbraco-package.json" />
+  </Folder>
+</Solution>
