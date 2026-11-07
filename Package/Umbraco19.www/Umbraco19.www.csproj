@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Our.Umbraco.PostgreSql" />
-    <PackageReference Include="Our.Umbraco.PostgreSql.Umbraco.License" />
     <PackageReference Include="Umbraco.Cms" />
     <PackageReference Include="Umbraco.Licenses" />
   </ItemGroup>
@@ -39,16 +38,12 @@
   <PropertyGroup>
     <!-- Razor files are needed for the backoffice to work correctly -->
     <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+    <UserSecretsId>5faa5c9c-d8b6-4744-810b-b6ef0b4beb2e</UserSecretsId>
   </PropertyGroup>
 
 
   <ItemGroup>
     <ProjectReference Include="..\Our.Umbraco.PostgreSql.Umbraco.License\Our.Umbraco.PostgreSql.Umbraco.License.pack.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <!-- Keep the local appsettings.json override out of publish output -->
-    <Content Update="appsettings.Local.json" CopyToPublishDirectory="Never" />
   </ItemGroup>
 
 
