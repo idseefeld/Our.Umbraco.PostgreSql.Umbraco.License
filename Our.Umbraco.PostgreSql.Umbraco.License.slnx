@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/NPoco/">
+    <File Path="NPoco/Directory.Build.props" />
     <Project Path="NPoco/src/NPoco.Abstractions/NPoco.Abstractions.csproj" />
     <Project Path="NPoco/src/NPoco.SqlServer/NPoco.SqlServer.csproj" />
     <Project Path="NPoco/src/NPoco/NPoco.csproj" />
