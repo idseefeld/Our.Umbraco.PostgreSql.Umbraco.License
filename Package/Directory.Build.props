@@ -2,11 +2,11 @@
 <Project>
 	<PropertyGroup>
 		<VersionPrefix>19.0.0</VersionPrefix>
-		<PreReleaseSufix>-rc3</PreReleaseSufix>
+		<PreReleaseSuffix>-rc3</PreReleaseSuffix>
 		<TargetFramework>net11.0</TargetFramework>
 		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 		<FileVersion>$(VersionPrefix)</FileVersion>
-		<Version>$(VersionPrefix)$(PreReleaseSufix)</Version>
+		<Version>$(VersionPrefix)$(PreReleaseSuffix)</Version>
 		<Authors>Dirk Seefeld</Authors>
 		<PackageIcon>postgresql.png</PackageIcon>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
