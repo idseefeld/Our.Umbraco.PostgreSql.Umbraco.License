@@ -2,7 +2,7 @@
 <Project>
 	<PropertyGroup>
 		<VersionPrefix>19.0.0</VersionPrefix>
-		<PreReleaseSuffix>-rc3</PreReleaseSuffix>
+		<PreReleaseSuffix>-rc4</PreReleaseSuffix>
 		<TargetFramework>net11.0</TargetFramework>
 		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 		<FileVersion>$(VersionPrefix)</FileVersion>
