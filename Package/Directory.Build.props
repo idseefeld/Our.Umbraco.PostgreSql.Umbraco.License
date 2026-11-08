@@ -2,11 +2,11 @@
 <Project>
 	<PropertyGroup>
 		<VersionPrefix>17.9.0</VersionPrefix>
-		<PreReleaseSufix>-rc4</PreReleaseSufix>
+		<PreReleaseSuffix>-rc4</PreReleaseSuffix>
 		<TargetFramework>net10.0</TargetFramework>
 		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 		<FileVersion>$(VersionPrefix)</FileVersion>
-		<Version>$(VersionPrefix)$(PreReleaseSufix)</Version>
+		<Version>$(VersionPrefix)$(PreReleaseSuffix)</Version>
 		<Authors>Dirk Seefeld</Authors>
 		<PackageIcon>postgresql.png</PackageIcon>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
