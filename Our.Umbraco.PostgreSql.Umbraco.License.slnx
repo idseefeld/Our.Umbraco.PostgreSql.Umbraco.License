@@ -12,5 +12,5 @@
     <File Path=".gitignore" />
     <File Path="Package/Directory.Build.props" />
   </Folder>
-  <Project Path="Umbraco17.www/Umbraco17.www.csproj" />
+  <Project Path="Umbraco18.www/Umbraco18.www.csproj" Id="d04f3aaa-b5a7-415c-9b25-a3c8d78c947d" />
 </Solution>
