@@ -11,7 +11,6 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
     <File Path="Package/Directory.Build.props" />
-    <File Path="Package/Our.Umbraco.PostgreSql.Umbraco.License/wwwroot/App_Plugins/Our.Umbraco.PostgreSql.Umbraco.License/umbraco-package.json" />
   </Folder>
   <Project Path="Umbraco17.www/Umbraco17.www.csproj" />
 </Solution>

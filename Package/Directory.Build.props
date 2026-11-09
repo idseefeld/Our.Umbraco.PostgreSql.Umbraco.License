@@ -31,4 +31,51 @@
 		<None Include="..\LICENSE" Pack="true" PackagePath=""/>
 		<None Include="..\readme.md" Pack="true" PackagePath=""/>
 	</ItemGroup>
+
+	<!-- sync versions from Directory.Build.props to umbraco-package.json -->
+	<UsingTask TaskName="SynchronizeUmbracoPackageVersion" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+			<ManifestPath ParameterType="System.String" Required="true" />
+			<Version ParameterType="System.String" Required="true" />
+		</ParameterGroup>
+		<Task>
+			<Using Namespace="System.IO" />
+			<Using Namespace="System.Text" />
+			<Using Namespace="System.Text.RegularExpressions" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+        if (!Regex.IsMatch(Version, @"^[0-9A-Za-z.+-]+$"))
+        {
+            Log.LogError("The package version '{0}' cannot be written to the Umbraco manifest.", Version);
+            return false;
+        }
+
+        var encoding = new UTF8Encoding(false, true);
+        var content = encoding.GetString(File.ReadAllBytes(ManifestPath));
+        var matches = Regex.Matches(content, @"(?m)^[ \t]*""version""[ \t]*:[ \t]*""(?<value>[^""\r\n\\]*)""[ \t]*,?[ \t]*\r?$");
+        if (matches.Count != 1)
+        {
+            Log.LogError("Expected exactly one version property in the Umbraco manifest '{0}', but found {1}.", ManifestPath, matches.Count);
+            return false;
+        }
+
+        var value = matches[0].Groups["value"];
+        if (value.Value != Version)
+        {
+            content = content.Remove(value.Index, value.Length).Insert(value.Index, Version);
+            File.WriteAllBytes(ManifestPath, encoding.GetBytes(content));
+            Log.LogMessage(MessageImportance.High, "Updated Umbraco manifest version to {0}.", Version);
+        }
+      ]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+	<Target Name="SynchronizeUmbracoPackageManifestVersion"
+			BeforeTargets="PrepareForBuild;ResolveStaticWebAssetsInputs;GenerateNuspec"
+			Condition="'$(DesignTimeBuild)' != 'true'">
+		<SynchronizeUmbracoPackageVersion
+		  ManifestPath="$(MSBuildProjectDirectory)\wwwroot\App_Plugins\$(PackageId)\umbraco-package.json"
+		  Version="$(Version)" />
+	</Target>
 </Project>
